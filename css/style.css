@@ -410,6 +410,7 @@ h2 {
 .populaires-cards img {
   width: 33%;
   height: 146px;
+  object-fit:cover;
   border-radius: 20px 0px 0 20px; /* Coins arrondis en haut à gauche et à droite */
   box-sizing: border-box; /* Inclut les bordures dans la taille */
   border: 5px solid #ffffff; /* Bordure blanche de 5px autour des images */
