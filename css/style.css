@@ -168,7 +168,7 @@ i.fa-solid.neutral-star {
 }
 
 .search-bar {
-    max-width: 377px;
+    width: 377px; 
     border: 1px solid var(--border-color);
     background-color: var(--background-color);
     overflow: hidden;
@@ -485,13 +485,16 @@ h2 {
 .activites-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 20px;
+    max-width: 1280px;
+    
+        
 }
 
 /* Conteneur du titre Activités */
 .activites-title-container {
     margin-top: var(--global-spacing);
-    padding: 0 19px;
+    padding: 0;
 }
 
 /* Titre principal (ex : h2) */
@@ -509,9 +512,7 @@ h2 {
     border-radius: 20px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
     height: 439px;
-    /* Hauteur fixe */
     width: auto;
-    /* La grille gère la largeur */
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -522,9 +523,7 @@ h2 {
 .activites .card img {
     width: 100%;
     height: 380px;
-    /* Hauteur fixe pour l'image */
     object-fit: cover;
-    /* Recadre l'image si besoin */
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -536,7 +535,6 @@ h2 {
     text-align: left;
     padding: 10px 19px;
     margin: 0;
-
     line-height: 1.4;
 }
 
@@ -799,7 +797,6 @@ h2 {
         border-radius: 0 0 20px 20px;
         display: flex;
         align-items: center;
-        justify-content: center;
         font-size: var(--font-size-medium);
         font-weight: var(--font-bold);
         color: var(--text-color);
@@ -845,6 +842,8 @@ h2 {
     .nav-links {
         display: flex;
         width: 100%;
+        gap: 0;
+        
     }
 
     .nav-link {
@@ -906,7 +905,6 @@ h2 {
 
     .search-bar {
         width: 100%;
-        /* Occuper toute la largeur du conteneur parent */
         height: 49px;
         border-radius: 15px;
     }
@@ -975,6 +973,8 @@ h2 {
         gap: 0.5rem;
         width: 100%;
         box-sizing: border-box;
+        justify-content: flex-start; 
+            
     }
 
     .filter-btn {
