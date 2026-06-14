@@ -1,15 +1,18 @@
 /****Variables et Styles Globaux****/
 :root {
-    /* Couleurs */
+    /* Couleurs (thème clair par défaut) */
     --main-color: #0065fc;
+    --main-color-dark: #004bb5;
     --main-bg-color: #f2f2f2;
     --filter-bg-color: #deebff;
     --background-color: #ffffff;
     --text-color: #000000;
     --border-color: #d9d9d9;
     --neutral-color: #f5f5f5;
+    --shadow-color: rgba(0, 0, 0, 0.1);
     /****Typographie*****/
     --font-family: "Raleway", sans-serif;
+    --font-family-heading: "Poppins", "Raleway", sans-serif;
     --font-size-small: 1rem;
     /* 16px */
     --font-size-medium: 1.125rem;
@@ -21,6 +24,19 @@
     /*****Espacement*****/
     --global-spacing: 30px;
     /* Espace global entre sections */
+}
+
+/* Thème sombre : on ne change que les couleurs, tout le reste suit */
+:root[data-theme="dark"] {
+    --main-color: #4d94ff;
+    --main-color-dark: #6aa8ff;
+    --main-bg-color: #2a2a2a;
+    --filter-bg-color: #1b2a4a;
+    --background-color: #1e1e1e;
+    --text-color: #f2f2f2;
+    --border-color: #444444;
+    --neutral-color: #2a2a2a;
+    --shadow-color: rgba(0, 0, 0, 0.6);
 }
 
 /*****Styles Globaux****/
@@ -93,7 +109,7 @@ a {
 }
 
 i.fa-solid.neutral-star {
-    color: var(--main-bg-color);
+    color: var(--border-color);
 }
 
 /****Header et Navigation****/
@@ -137,7 +153,7 @@ i.fa-solid.neutral-star {
 }
 
 .nav-link:hover {
-    color: #004bb5;
+    color: var(--main-color-dark);
 }
 
 /***Introduction***/
@@ -217,7 +233,7 @@ i.fa-solid.neutral-star {
 }
 
 .btn-search:hover {
-    background-color: #004bb5;
+    background-color: var(--main-color-dark);
 }
 
 /****Bouton de recherche pour mobile***/
@@ -354,7 +370,7 @@ h2 {
 .hebergements-grid .card {
     background-color: var(--background-color);
     border-radius: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 15px var(--shadow-color);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -366,7 +382,7 @@ h2 {
     /* Hauteur fixe */
     object-fit: cover;
     border-radius: 20px 20px 0 0;
-    border: 5px solid #ffffff;
+    border: 5px solid var(--background-color);
 }
 
 /* Contenu des cartes */
@@ -431,9 +447,9 @@ h2 {
 .populaires-cards .card {
     display: flex;
     margin-top: 33px;
-    background-color: #fff;
+    background-color: var(--background-color);
     border-radius: 20px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 15px var(--shadow-color);
 }
 
 .populaires-cards img {
@@ -441,7 +457,7 @@ h2 {
     height: 146px;
     border-radius: 20px 0px 0 20px;
     box-sizing: border-box;
-    border: 5px solid #ffffff;
+    border: 5px solid var(--background-color);
     object-fit: cover;
 }
 
@@ -508,9 +524,9 @@ h2 {
    * Cartes Activités 
    **********************************/
 .activites .card {
-    background-color: #fff;
+    background-color: var(--background-color);
     border-radius: 20px;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 15px var(--shadow-color);
     height: 439px;
     width: auto;
     display: flex;
@@ -643,7 +659,7 @@ h2 {
         flex-direction: column;
         background-color: var(--background-color);
         border-radius: 20px;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 15px var(--shadow-color);
         overflow: hidden;
     }
 
@@ -718,7 +734,7 @@ h2 {
         gap: 20px;
         background-color: var(--background-color);
         border-radius: 20px;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 3px 15px var(--shadow-color);
         overflow: hidden;
     }
 
@@ -775,7 +791,7 @@ h2 {
         height: 270px;
         background-color: var(--background-color);
         border-radius: 20px;
-        box-shadow: 0 0.1875rem 0.9375rem rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0.1875rem 0.9375rem var(--shadow-color);
         display: flex;
         flex-direction: column;
         overflow: hidden;
@@ -851,7 +867,7 @@ h2 {
         text-align: center;
         position: relative;
         text-decoration: none;
-        color: #000;
+        color: var(--text-color);
         font-size: 16px;
         font-weight: 400;
         padding: 5px 0;
@@ -1041,7 +1057,7 @@ h2 {
         width: 100%;
         height: 180px;
         object-fit: cover;
-        border-bottom: 5px solid #fff;
+        border-bottom: 5px solid var(--background-color);
     }
 
     .hebergements-grid .card-content {
@@ -1080,5 +1096,127 @@ h2 {
         width: 100%;
         text-align: start;
         margin-left: 30px;
+    }
+}
+
+/****Interactivité (filtre actif + bouton)****/
+.filter-btn.active {
+    background-color: var(--main-color);
+    color: var(--background-color);
+    border-color: var(--main-color);
+}
+
+.filter-btn.active i {
+    color: var(--background-color);
+}
+
+.btn-show-more {
+    cursor: pointer;
+}
+
+/****************************************************************
+ * AMÉLIORATIONS : typographie, thème sombre, animations
+ ****************************************************************/
+
+/* Typographie : police dédiée pour les titres */
+h1,
+h2,
+h3,
+.section-title,
+.cards-title,
+.card-title {
+    font-family: var(--font-family-heading);
+    letter-spacing: -0.01em;
+}
+
+/* Transition douce lors du changement de thème clair / sombre */
+body,
+.main-container,
+header,
+.search-bar,
+.search-icon,
+.filter-btn,
+.hebergements,
+.populaires,
+.activites .card,
+.hebergements-grid .card,
+.populaires-cards .card,
+.btn-search,
+.footer {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Bouton de changement de thème (lune / soleil) */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-left: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    background-color: var(--background-color);
+    color: var(--main-color);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--filter-bg-color);
+    transform: rotate(20deg);
+}
+
+.theme-toggle i {
+    color: var(--main-color);
+}
+
+/* Animation au survol des cartes */
+.hebergements-grid .card,
+.populaires-cards .card,
+.activites .card {
+    transition: transform 0.25s ease, box-shadow 0.25s ease,
+        background-color 0.4s ease, color 0.4s ease;
+}
+
+.hebergements-grid .card:hover,
+.populaires-cards .card:hover,
+.activites .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px var(--shadow-color);
+}
+
+/* Zoom léger des photos d'activités au survol */
+.activites .card img {
+    transition: transform 0.4s ease;
+}
+
+.activites .card:hover img {
+    transform: scale(1.08);
+}
+
+/* Apparition progressive au défilement (ajoutée par le JS) */
+.reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* Respect de la préférence "moins d'animations" */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
     }
 }

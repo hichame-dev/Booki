@@ -1,0 +1,113 @@
+{
+  "hebergements": [
+    {
+      "nom": "Hôtel du Port",
+      "image": "./images/hebergements/fred-kleber.jpg",
+      "alt": "Hôtel du Port avec lit proche de la fenêtre",
+      "prix": 52,
+      "etoiles": 4,
+      "categories": ["economique", "familial"]
+    },
+    {
+      "nom": "Hôtel Chez Amina",
+      "image": "./images/hebergements/febrian-zakaria.jpg",
+      "alt": "Chez Amina avec bureau en bois et chaise en bois proche de la fenêtre",
+      "prix": 96,
+      "etoiles": 4,
+      "categories": ["romantique"]
+    },
+    {
+      "nom": "Hôtel Les Mouettes",
+      "image": "./images/hebergements/reisetopia.jpg",
+      "alt": "Hôtel Les Mouettes chambre avec miroir sur les meubles",
+      "prix": 76,
+      "etoiles": 4,
+      "categories": ["familial", "pepites"]
+    },
+    {
+      "nom": "Hôtel De La Mer",
+      "image": "./images/hebergements/annie-spratt.jpg",
+      "alt": "Hôtel De La Mer avec tableau bleu ciel",
+      "prix": 46,
+      "etoiles": 4,
+      "categories": ["economique", "romantique"]
+    },
+    {
+      "nom": "Auberge La Canebière",
+      "image": "./images/hebergements/marcus-loke.jpg",
+      "alt": "La Canebière lit superposé en face de la fenêtre",
+      "prix": 25,
+      "etoiles": 4,
+      "categories": ["economique", "familial"]
+    },
+    {
+      "nom": "Auberge Le Panier",
+      "image": "./images/hebergements/nicate-lee.jpg",
+      "alt": "Auberge Le Panier lit avec beaucoup de bois",
+      "prix": 23,
+      "etoiles": 4,
+      "categories": ["economique", "pepites"]
+    },
+    {
+      "nom": "Hôtel Le Soleil du Matin",
+      "image": "./images/hebergements/emile-guillemot.jpg",
+      "alt": "Hôtel Le Soleil du Matin, chambre lumineuse",
+      "prix": 68,
+      "etoiles": 5,
+      "categories": ["romantique", "pepites"]
+    },
+    {
+      "nom": "Hôtel Bleu et Blanc",
+      "image": "./images/hebergements/aw-creative.jpg",
+      "alt": "Hôtel Bleu et Blanc, chambre épurée",
+      "prix": 88,
+      "etoiles": 4,
+      "categories": ["familial", "romantique"]
+    }
+  ],
+  "populaires": [
+    {
+      "nom": "Hôtel Le Soleil du Matin",
+      "image": "./images/hebergements/emile-guillemot.jpg",
+      "alt": "Hôtel Le Soleil du Matin",
+      "prix": 128,
+      "etoiles": 5
+    },
+    {
+      "nom": "Hôtel au cœur de l'eau",
+      "image": "./images/hebergements/aw-creative.jpg",
+      "alt": "Hôtel au cœur de l'eau",
+      "prix": 71,
+      "etoiles": 4
+    },
+    {
+      "nom": "Hôtel Tout bleu et Blanc",
+      "image": "./images/hebergements/febrian-zakaria2.jpg",
+      "alt": "Hôtel Tout bleu et Blanc",
+      "prix": 68,
+      "etoiles": 4
+    }
+  ],
+  "activites": [
+    {
+      "nom": "Vieux-Port",
+      "image": "./images/activites/reno-laithienne.jpg",
+      "alt": "Vieux-Port de Marseille"
+    },
+    {
+      "nom": "Îles du Frioul",
+      "image": "./images/activites/paul-hermann.jpg",
+      "alt": "Îles du Frioul, Pomègues"
+    },
+    {
+      "nom": "Parc National des Calanques",
+      "image": "./images/activites/kilyan-sockalingum.jpg",
+      "alt": "Parc National des Calanques"
+    },
+    {
+      "nom": "Notre-Dame de la Garde",
+      "image": "./images/activites/florian-wehde.jpg",
+      "alt": "Notre-Dame de la Garde"
+    }
+  ]
+}

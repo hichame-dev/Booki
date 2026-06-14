@@ -1,0 +1,8 @@
+# Artefacts d'outils / environnement
+*bash_audit.log
+.playwright-mcp/
+verif-booki.png
+
+# Système
+.DS_Store
+Thumbs.db
