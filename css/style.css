@@ -1199,7 +1199,7 @@ header,
 /* Apparition progressive au défilement (ajoutée par le JS) */
 .reveal {
     opacity: 0;
-    transform: translateY(24px);
+    transform: translateY(10px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
